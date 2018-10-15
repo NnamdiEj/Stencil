@@ -1,0 +1,25 @@
+header
+    div.header-wrap
+        div.game-logo-flex-box
+            h1
+                a(href="/") Draw Off!!
+        div.user-sign-in
+            if (!loggedin)
+                div.registration-form
+                    //if (!home)
+                    a(href="/register")
+                        div.registration-form-flex-box Register
+                    //else
+                        div.registration-form-flex-box Register
+            div.login-wrap
+                if (loggedin)
+                    a(href="logout")
+                        div.logout
+                            span Sign Out
+                        div.image-logo
+                            img(src="/images/profile-logo.png" height=70 width=70 class="profile-logo")
+                else
+                    a(href="login")
+                        div.login Sign In
+                        div.image-logo
+                            img(src="/images/profile-logo.png" height=70 width=70 class="profile-logo")

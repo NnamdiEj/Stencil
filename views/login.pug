@@ -1,0 +1,30 @@
+extend layout
+
+block head
+    title Stencil
+    link(rel="stylesheet", href="/stylesheets/login.css")
+    link(rel="stylesheet", href="/stylesheets/layout.css")
+    link(href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Copse" rel="stylesheet")
+
+block content
+    div(class="content-wrapper")
+        div(class="form-wrapper")
+            form(action="/login" method="POST" id="login-form")
+                h1 Log In
+                div(class="container")
+                    label(for="email")
+                        b Email
+                    input(type="text" placeholder="Enter Email" name="emailLogin" required)
+
+                    label(for="psw")
+                        b Password
+                    input(type="password" placeholder="Enter Password" name="pswLogin" required)
+
+                    label
+                        input(type="checkbox" checked="checked" name="rememberLogin" style="margin-bottom:15px")
+                        span Remember me
+
+                    div(class="clearfix")
+                        button(type="button" class="cancelbtn") Cancel
+                        button(type="submit" class="signupbtn") Log In

@@ -1,0 +1,58 @@
+extends layout
+block head
+    title Stencil
+    link(rel="stylesheet", href="/stylesheets/layout.css")
+    link(rel="stylesheet", href="/stylesheets/index.css")
+    link(rel="stylesheet", href="/stylesheets/modal.css")
+    link(href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Copse" rel="stylesheet")
+
+block content
+    div.site-wrapper
+        div.room-wrapper
+            div.game-info
+                span(id="welcome-text-home") Welcome to Stencil
+                div(id="game-statistics")
+                    div Active Players: #{totalPlayers}
+                div(id="guest-play-div")
+                    button(id="guest-play") Play as Guest
+            div.all-rooms-wrap
+                div.all-rooms
+                    div.enter-rooms
+                        button(id="create-room") Create Room
+                        a(href="game" id="join-room-link")
+                            button(id="join-room") Join Room
+                    div.open-rooms
+                        ul(id="list-of-rooms")
+                            each room in rooms
+                                li.room
+                                    a(href= '/gamerooms/room/' + room.getRoomName().split(' ').join('+'))
+                                        div.room-wrap
+                                            div.room-name= room.getRoomName()
+                                            div.activePlayers= 'Active Players: ' + room.getNumberOfPlayers() + '/8'
+
+        div(id="registration-modal-form-background" class="modal")
+            div(class="modal-content")
+                //form(action="/" method="POST" id="room-creation-form")
+                div(class="container")
+                        h1 Create a Room
+                        hr
+
+                        label(for="roomname")
+                            b Username
+                        input(type="text" placeholder="Enter Name of Room" id="roomname" name="roomname" required)
+
+                        div(id='roomPasswordBox')
+                            label(for="roomPassword")
+                                b Password
+                            input(type="text" placeholder="Enter Password" id="roomPassword" name="roomPassword")
+
+                        label
+                            span Private Room
+                        input(type="checkbox" id="private" name="private" style="margin-bottom:15px")
+
+                        div(class="clearfix")
+                            button(type="submit" class="signupbtn") Create Room
+                            button(type="submit" class="cancelbtn") Cancel
+
+    script(src="/javascripts/homepage/modal.js")

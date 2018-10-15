@@ -1,0 +1,13 @@
+extends layout
+
+block head
+  title Stencil
+  link(rel="stylesheet", href="/stylesheets/index.css")
+  link(rel="stylesheet", href="/stylesheets/layout.css")
+  link(href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet")
+  link(href="https://fonts.googleapis.com/css?family=Copse" rel="stylesheet")
+
+block content
+  h1= message
+  h2= error.status
+  pre #{error.stack}

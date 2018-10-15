@@ -1,0 +1,42 @@
+extends layout
+
+block head
+    title Stencil
+    link(rel="stylesheet", href="/stylesheets/index.css")
+    link(rel="stylesheet", href="/stylesheets/register.css")
+    link(href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Copse" rel="stylesheet")
+    link(rel="stylesheet", href="/stylesheets/layout.css")
+
+block content
+    div(class="content-wrapper")
+        div(class="form-wrapper")
+            form(action="/register" method="POST" id="registration-form")
+                div(class="container")
+                    h1 Sign Up
+                    p Please fill in this form to create an account.
+                    hr
+
+                    label(for="username")
+                        b Username
+                    input(type="text" placeholder="Enter Username" name="username" required)
+
+                    label(for="email")
+                        b Email
+                    input(type="text" placeholder="Enter Email" name="email" required)
+
+                    label(for="psw")
+                        b Password
+                    input(type="password" placeholder="Enter Password" name="psw" required)
+
+                    label(for="psw-repeat")
+                        b Repeat Password
+                    input(type="password" placeholder="Repeat Password" name="pswRepeat" required)
+
+                    label
+                        input(type="checkbox" checked="checked" name="remember" style="margin-bottom:15px")
+                        span Remember me
+
+                    div(class="clearfix")
+                        button(type="button" class="cancelbtn") Cancel
+                        button(type="submit" class="signupbtn") Sign Up

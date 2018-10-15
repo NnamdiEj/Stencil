@@ -1,0 +1,197 @@
+.content-wrap {
+  margin: 0 20%;
+}
+
+.chat-wrapper {
+  width: 235px;
+  height: 600px;
+  border: darkblue 2px solid;
+}
+
+.chat-log {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.message, .handle {
+  width: calc(100% - 15px);
+  font-size: 15px;
+  padding-left: 10px;
+  height: 27px;
+    background-color: ghostwhite;
+}
+
+.submit-button {
+  width: 100%;
+  background-color: darkblue;
+  color: white;
+  font-size: 15px;
+}
+
+.chat-messages {
+  height: 100%;
+  background-color: ghostwhite;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+}
+
+.chat-input {
+  border-width: 1px;
+  border-color: darkblue;
+  border-style: solid;
+}
+
+#chat {
+  border-width: 1px;
+  border-color: darkblue;
+  border-style: solid;
+}
+
+ul {
+  margin: 0 25px;
+  padding: 0;
+  width: calc(100% - 50px);
+  list-style-type: none;
+}
+
+li strong {
+  color: darkblue;
+}
+
+li {
+  color: black;
+  font-size: 14px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0;
+  border-bottom: lightgray 1px solid;
+  width: 100%;
+}
+
+.typing {
+    padding-left: 25px;
+    padding-top: 10px;
+    color: darkgray;
+}
+
+.interactive-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.game-wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 2% 10%;
+}
+
+.players {
+    min-height: 100px;
+    margin: 0;
+    width: 100%;
+}
+
+.team2 {
+    border-bottom: 1px solid darkblue;
+}
+
+.team-text {
+    background-color: darkred;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+}
+
+.canvas-wrapper {
+    border: darkblue 2px solid;
+}
+
+.game-status {
+    background-image: radial-gradient(darkblue, navy);
+    color: white;
+    font-size: 30px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.colors-sizes {
+    display: flex;
+    flex-direction: row;
+    height: 91px;
+    border-top: darkblue 2px solid;
+    color: darkblue;
+    font-size: 20px;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.colors {
+    width: 300px;
+    padding: 5px;
+}
+
+.sizes {
+    width: 300px;
+    padding: 5px;
+}
+
+.colors-sizes button {
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.colors-sizes button:focus {
+    outline: 0;
+}
+
+.colors button {
+    padding: 10px;
+}
+
+#purple {
+    background-color: #cb3594;
+}
+
+#green {
+    background-color: #659b41;
+}
+
+#yellow {
+    background-color: #ffcf33;
+}
+
+#brown {
+    background-color: #986928;
+}
+
+.active {
+     border: darkblue 2px solid;
+ }
+
+.passive {
+    border: darkblue 1px solid;
+}
+
+.size-active {
+    background-color: darkblue;
+}
+
+.size-passive {
+    background-color: black;
+}
+
+#small {
+    padding: 5px;
+}
+
+#medium {
+    padding: 10px;
+}
+
+#large {
+    padding: 15px;
+}

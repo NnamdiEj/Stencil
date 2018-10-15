@@ -1,0 +1,48 @@
+extends layout
+block head
+    head
+        title= roomName.split('+').join(' ') + " | Stencil"
+        link(href="https://fonts.googleapis.com/css?family=Copse" rel="stylesheet")
+        link(rel="stylesheet", href="/stylesheets/layout.css")
+        link(rel='stylesheet', href='/stylesheets/game.css')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js")
+        script(type="text/javascript" src="/javascripts/game-components/excanvas.js")
+
+block content
+    div(class='game-wrapper')
+        div(class='game-status')
+            span(id='game-status-text') Game Status
+        div(class='interactive-wrapper')
+            div(class='canvas-wrapper')
+                div(class='colors-sizes')
+                    div(class='colors')
+                        span(class="colors-text") Colors
+                        div(class='color-buttons')
+                            button(id="purple" class="active")
+                            button(id="green" class="passive")
+                            button(id="yellow" class="passive")
+                            button(id="brown" class="passive")
+                    div(class='sizes')
+                        span(class="sizes-text") Sizes
+                        div(class='size-buttons')
+                            button(id="small" class="size-active")
+                            button(id="medium" class="size-passive")
+                            button(id="large" class="size-passive")
+            div(class="chat-wrapper")
+                div(class="chat-log")
+                    div(class="player-list")
+                        div(class="team1")
+                            div(class='team-text') Team 1
+                            ul(id="team1-players" class="players")
+                        div(class="team2")
+                            div(class='team-text') Team 2
+                            ul(id="team2-players" class="players")
+                    div(class="chat-messages")
+                        ul(id="messages")
+                        div(class="typing")
+                    div(class="chat-input")
+                        input(class="message" placeholder="Chat")
+                        button(class="submit-button") Submit
+    script(src="/javascripts/game-components/game.js")
+    script(src="/javascripts/game-components/chat.js?roomName=" + roomName + "&username=" + username id='chat-script')
+    script(src= "/javascripts/game-components/canvas.js?roomName=" + roomName + "&username=" + username id='canvas-script')

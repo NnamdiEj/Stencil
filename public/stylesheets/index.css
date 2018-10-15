@@ -1,0 +1,239 @@
+.room-wrapper {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    width: 500px;
+}
+
+#welcome-text-home {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    color: darkblue;
+    font-family: 'Copse', serif;
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.enter-rooms {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.enter-rooms button {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 25px;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: ghostwhite;
+    border: none;
+    color: darkblue;
+    text-align: center;
+    padding: 0;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: 2px 3px #999;
+    width: 100%;
+}
+
+.enter-rooms button:active {
+    box-shadow: 0 0 #999;
+    transform: translateX(1px) translateY(3px);
+    transition: 0.15s;
+    outline: 0;
+}
+
+.enter-rooms button:focus {
+    outline: 0;
+}
+
+.enter-rooms a {
+    color: darkblue;
+}
+
+.enter-rooms a, #create-room {
+    width: 46%;
+    height: 70px;
+    margin: 10px 0;
+}
+
+#create-room {
+    margin-left: 2%
+}
+
+#join-room {
+    margin-right: 4%
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+/* The Modal (background) */
+.login-modal {
+    display: none; /* Hidden by default */
+    z-index: 1; /* Sit on top */
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 400px; /* Full width */
+    height: 300px; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+    overflow: hidden;
+}
+
+/* Modal Content/Box */
+.login-modal-form-content {
+    display: none; /* Hidden by default */
+    z-index: 1; /* Sit on top */
+    position: absolute;
+    right: 0;
+    top: 3px;
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 15px;
+    border: 1px solid #888;
+    width: 278px; /* Full width */
+    height: 300px; /* Full height */
+    color: darkblue;
+    overflow: hidden;
+}
+
+.login-modal-form-content .container {
+    padding: 0;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    color: darkblue;
+}
+
+.modal-content h1 {
+    color: darkblue;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.site-wrapper {
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.all-rooms {
+    background-color: #00005b;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.all-rooms-wrap {
+    background: url("../images/nauticalnavystripesbckgrnd.png");
+    border-radius: 10px;
+}
+
+button {
+    outline: none;
+}
+
+ul {
+    background-color: dodgerblue;
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0;
+}
+
+li {
+    font-family: 'Luckiest Guy', cursive;
+    color: white;
+    height: 100px;
+    font-size: 18px;
+    padding: 0;
+    border-top: white solid 5px;
+}
+
+li:nth-child(even) {
+    background-color: darkblue;
+}
+
+li a {
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px 5px;
+}
+.room-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.room-name {
+    font-size: 25px;
+}
+
+.active-players {
+    font-size: 16px;
+}
+
+#game-statistics {
+    font-family: 'Copse', serif;
+    font-size: 30px;
+    color: darkblue;
+    display: flex;
+    justify-content: center;
+}
+
+#guest-play {
+    width: 100%;
+    height: 70px;
+    color: white;
+    background-color: darkblue;
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+#guest-play-div {
+    font-family: 'Copse', serif;
+    font-size: 25px;
+    color: darkblue;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+#guest-play:hover {
+    cursor: pointer;
+}
